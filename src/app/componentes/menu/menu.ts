@@ -15,6 +15,12 @@ export class Menu {
   ) {}
 
   logout(): void {
+    const wantsToLogout = window.confirm('Tem certeza que deseja sair do site?');
+
+    if (!wantsToLogout) {
+      return;
+    }
+
     this.authService.logout();
     this.router.navigate(['/login']);
   }
