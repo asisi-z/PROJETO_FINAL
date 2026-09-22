@@ -147,6 +147,24 @@ body {
     color: #007bff; 
 }
 
+.opening-hours {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #d5d9dc;
+}
+
+.opening-hours h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.opening-hours p {
+    margin-top: 6px;
+    color: #333333;
+    line-height: 1.4;
+}
+
 .main-content {
     flex: 1;
     background-image: url('../../../../public/imagem4.jpeg'); 

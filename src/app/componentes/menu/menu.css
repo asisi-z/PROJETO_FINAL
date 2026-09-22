@@ -1,8 +1,9 @@
- .sidebar {
+
+.sidebar {
 	width: 240px;
 	min-height: 100vh;
-	background-color: #f8f9fa;
-	border-right: 1px solid #e0e0e0;
+	background-color: #1D2D2A;
+	border-right: 1px solid #1D2D2A;
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
@@ -20,7 +21,7 @@
 }
 
 .menu a {
-	color: #333;
+	color: #FFFFFF;
 	padding: 12px 15px;
 	border-radius: 4px;
 	text-decoration: none;
@@ -28,16 +29,21 @@
 	transition: background-color 0.2s;
 }
 
-.menu a:hover,
+.menu a:hover {
+	background-color: #777777;
+	font-weight: 500;
+}
+
 .menu a.active {
-	background-color: #e2e6ea;
+	background-color: #32CD32;
+	color: #000000;
 	font-weight: 500;
 }
 
 .menu a.logout-btn {
 	margin-top: 40px;
 	color: #dc3545;
-	border-top: 1px solid #e0e0e0;
+	border-top: 1px solid #FFFFFF;
 	border-radius: 0;
 }
 
