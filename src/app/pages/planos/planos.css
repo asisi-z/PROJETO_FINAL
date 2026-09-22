@@ -10,10 +10,6 @@
 	display: flex;
 	justify-content: center;
 	padding: 40px 24px;
-	background-image: url('/img/fundo.png');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
 
 .plans-content {

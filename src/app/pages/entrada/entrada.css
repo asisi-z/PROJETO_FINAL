@@ -68,8 +68,8 @@ body {
 
 .main-content {
     flex: 1;
-    background-image: url('../../../../public/imagem4.jpeg'); 
-    background-size: contain;
+    background-image: url('/img/fundo.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #ffffff;
@@ -126,10 +126,11 @@ body {
 
 
 .welcome-card {
-    background-color: rgba(255, 255, 255, 0.85); 
+    background-color: rgba(255, 255, 255, 0.97);
     border: 1px solid #b0b7bd;
     padding: 40px;
-    width: 320px;
+    width: min(320px, 100%);
+    max-width: 100%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
     border-radius: 2px;
@@ -167,8 +168,8 @@ body {
 
 .main-content {
     flex: 1;
-    background-image: url('../../../../public/imagem4.jpeg'); 
-    background-size: contain;
+    background-image: url('/img/fundo.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #ffffff;
@@ -176,4 +177,19 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+}
+
+@media (max-width: 480px) {
+    .home-container .main-content {
+        min-height: calc(100vh - 170px);
+        padding: 16px 10px;
+    }
+
+    .welcome-card {
+        padding: 24px 18px;
+    }
+
+    .welcome-card h3 {
+        font-size: 14px;
+    }
 }
