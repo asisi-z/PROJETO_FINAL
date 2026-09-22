@@ -1,0 +1,32 @@
+.home-container {
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.main-content {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 24px;
+}
+
+.main-content h1 {
+	max-width: 100%;
+	color: #1D2D2A;
+	font-size: clamp(28px, 5vw, 42px);
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.home-container {
+		display: block;
+	}
+
+	.main-content {
+		min-height: calc(100vh - 180px);
+		padding: 24px 16px;
+	}
+}

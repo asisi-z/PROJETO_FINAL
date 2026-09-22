@@ -8,26 +8,35 @@
 	flex: 1;
 	min-width: 0;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-end;
 	align-items: center;
-	padding: 24px;
+	padding: 40px 24px 24px;
+	background-image: url('/img/fundo.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
-.contact-content {
+.contact-footer {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	width: min(100%, 900px);
+	padding: 18px;
+	border-top: 1px solid rgba(213, 217, 220, 0.9);
+	border-radius: 6px;
+	background-color: rgba(255, 255, 255, 0.94);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
+}
+
+.contact-item {
+	flex: 1;
+	min-width: 0;
 	text-align: center;
 }
 
-.contact-content h1 {
-	margin-bottom: 10px;
-	color: #1D2D2A;
-}
-
-.contact-instagram-logo {
-	width: 48px;
-	height: 48px;
-}
-
-.contact-content p {
+.contact-item p {
 	margin-bottom: 18px;
 	color: #333333;
 }
@@ -36,6 +45,8 @@
 .phone-link {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
+	max-width: 100%;
 	gap: 8px;
 	padding: 12px 18px;
 	border-radius: 4px;
@@ -63,6 +74,39 @@
 	}
 
 	.main-content {
-		padding: 24px 16px;
+		min-height: 100vh;
+		padding: 24px 16px 16px;
+	}
+
+	.contact-footer {
+		flex-direction: column;
+		gap: 16px;
+		padding: 16px;
+	}
+
+	.contact-item p {
+		margin-bottom: 10px;
+	}
+
+	.instagram-link,
+	.phone-link {
+		width: 100%;
+		padding: 11px 12px;
+	}
+}
+
+@media (max-width: 480px) {
+	.main-content {
+		padding: 16px 10px 10px;
+		background-position: center;
+	}
+
+	.contact-footer {
+		width: 100%;
+		padding: 14px 12px;
+	}
+
+	.contact-item p {
+		font-size: 14px;
 	}
 }

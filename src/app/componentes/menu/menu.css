@@ -66,3 +66,27 @@
 		padding: 10px;
 	}
 }
+
+@media (max-width: 400px) {
+	.sidebar {
+		padding: 10px 12px;
+	}
+
+	.sidebar-logo {
+		width: 72px;
+		margin-bottom: 12px;
+	}
+
+	.menu {
+		gap: 4px;
+	}
+
+	.menu a {
+		padding: 8px;
+		font-size: 13px;
+	}
+
+	.menu a.logout-btn {
+		margin-top: 16px;
+	}
+}
