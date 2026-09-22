@@ -1,0 +1,53 @@
+<main class="login-screen">
+        
+       
+        <div class="left-side">
+            <div class="carousel" aria-label="Imagens da academia" #carousel>
+                <div class="carousel-track">
+                    <img #slide class="carousel-slide active" src="img/imagem1.jpeg" alt="Treino na academia">
+                    <img #slide class="carousel-slide" src="img/imagem2.jpeg" alt="Exercício na academia">
+                    <img #slide class="carousel-slide" src="img/imagem3.jpeg" alt="Vida fitness">
+                </div>
+                <button class="carousel-button previous" type="button" aria-label="Imagem anterior" (click)="showSlide(currentSlide - 1)">&#10094;</button>
+                <button class="carousel-button next" type="button" aria-label="Próxima imagem" (click)="showSlide(currentSlide + 1)">&#10095;</button>
+                <div class="carousel-dots" aria-label="Selecionar imagem">
+                    <button #dot class="carousel-dot active" type="button" aria-label="Mostrar imagem 1" (click)="showSlide(0)"></button>
+                    <button #dot class="carousel-dot" type="button" aria-label="Mostrar imagem 2" (click)="showSlide(1)"></button>
+                    <button #dot class="carousel-dot" type="button" aria-label="Mostrar imagem 3" (click)="showSlide(2)"></button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="right-side">
+            <div class="login-box">
+                
+                <img src="img/logo.jpeg" class="logo" alt="Ford Logo">
+                
+                <h2>Boas vindas a academia mundo fitness</h2>
+                
+                <form (ngSubmit)="login()" #loginForm="ngForm">
+                    <div class="input-group">
+                        <span class="icon">👤</span>
+                        <input type="text" name="nome" id="username" placeholder="Insira seu e-mail ou usuário" autocomplete="username" required [(ngModel)]="username">
+                    </div>
+                    
+                    <div class="input-group">
+                        <span class="icon">🔒</span>
+                        <input type="password" name="senha" id="password" placeholder="Insira sua senha" autocomplete="current-password" required [(ngModel)]="password">
+                    </div>
+
+                    <div class="remember-me">
+                        <label>Logar automaticamente</label>
+                        <input type="checkbox" id="toggle-switch">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit" [disabled]="loginForm.invalid">Entrar</button>
+                </form>
+
+                <div class="message" [class.error]="isError" [class.success]="!isError && feedbackMessage">{{ feedbackMessage }}</div>
+            </div>
+        </div>
+
+    </main>
+
