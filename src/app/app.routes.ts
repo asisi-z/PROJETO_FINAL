@@ -4,6 +4,7 @@ import { Contato } from './pages/contato/contato';
 import { Entrada } from './pages/entrada/entrada';
 import { Localizacao } from './pages/localizacao/localizacao';
 import { Login } from './pages/login/login';
+import { Planos } from './pages/planos/planos';
 import { Treinos } from './pages/treinos/treinos';
 
 export const routes: Routes = [
@@ -13,5 +14,6 @@ export const routes: Routes = [
 	{ path: 'contato', component: Contato, canActivate: [authGuard] },
 	{ path: 'localizacao', component: Localizacao, canActivate: [authGuard] },
 	{ path: 'treinos', component: Treinos, canActivate: [authGuard] },
+	{ path: 'planos', component: Planos, canActivate: [authGuard] },
 	{ path: '**', redirectTo: 'entrada' },
 ];

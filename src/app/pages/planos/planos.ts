@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Menu } from '../../componentes/menu/menu';
 
 @Component({
   selector: 'app-planos',
-  imports: [],
+  imports: [Menu],
   templateUrl: './planos.html',
   styleUrl: './planos.css',
 })
