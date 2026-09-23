@@ -8,8 +8,6 @@
                     <img #slide class="carousel-slide" src="img/imagem2.jpeg" alt="Exercício na academia">
                     <img #slide class="carousel-slide" src="img/imagem3.jpeg" alt="Vida fitness">
                 </div>
-                <button class="carousel-button previous" type="button" aria-label="Imagem anterior" (click)="showSlide(currentSlide - 1)">&#10094;</button>
-                <button class="carousel-button next" type="button" aria-label="Próxima imagem" (click)="showSlide(currentSlide + 1)">&#10095;</button>
                 <div class="carousel-dots" aria-label="Selecionar imagem">
                     <button #dot class="carousel-dot active" type="button" aria-label="Mostrar imagem 1" (click)="showSlide(0)"></button>
                     <button #dot class="carousel-dot" type="button" aria-label="Mostrar imagem 2" (click)="showSlide(1)"></button>
