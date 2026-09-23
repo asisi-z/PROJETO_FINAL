@@ -28,7 +28,7 @@ body {
 }
 
 .sidebar-logo {
-    width: 100px;
+    width: 125px;
     margin-bottom: 30px;
     align-self: center;
 }
@@ -94,7 +94,7 @@ body {
     }
 
     .home-container > .sidebar .sidebar-logo {
-        width: 82px;
+        width: 105px;
         margin-bottom: 16px;
     }
 

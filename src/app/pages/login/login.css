@@ -130,7 +130,7 @@ form {
 
 
 .logo {
-    width: 150px;
+    width: min(220px, 100%);
     margin-bottom: 40px;
 }
 
@@ -273,7 +273,7 @@ h2 {
     }
 
     .logo {
-        width: 130px;
+        width: min(190px, 100%);
         margin-bottom: 28px;
     }
 
@@ -305,6 +305,10 @@ h2 {
 
     form {
         padding: 16px;
+    }
+
+    .logo {
+        width: min(170px, 100%);
     }
 
     .remember-me {

@@ -1,5 +1,9 @@
-<aside class="sidebar">
-	<img class="sidebar-logo" src="img/logo.jpeg" alt="Mundo Fitness">
+<aside class="sidebar" [class.open]="menuOpen">
+	<div class="overlay" *ngIf="menuOpen" (click)="toggleMenu()"></div>
+	<img class="sidebar-logo" src="img/logo2.png" alt="Mundo Fitness">
+	<button class="hamburger" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen" aria-label="Abrir ou fechar menu">
+		<span>{{ menuOpen ? '☰ Fechar' : '☰' }}</span>
+	</button>
 
 	<nav class="menu" aria-label="Navegação principal">
 		<a routerLink="/entrada" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Entrada</a>
@@ -9,4 +13,6 @@
 		<a routerLink="/planos" routerLinkActive="active">Planos</a>
 		<a class="logout-btn" href="#" (click)="$event.preventDefault(); logout()">Saída</a>
 	</nav>
+
+	<footer class="sidebar-copyright">&copy; 2026 Academia Mundo Fitness. Todos os direitos reservados.</footer>
 </aside>

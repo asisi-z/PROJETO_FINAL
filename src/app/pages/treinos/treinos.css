@@ -9,8 +9,20 @@
 	min-width: 0;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	padding: 40px 24px;
+	background-image: url('/img/fundo.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.treinos-intro {
+	width: min(100%, 900px);
+	padding: 28px;
+	border-radius: 6px;
+	background-color: rgba(255, 255, 255, 0.94);
+	text-align: center;
 }
 
 .main-content h1 {
@@ -20,6 +32,59 @@
 	text-align: center;
 }
 
+.treinos-intro p {
+	margin: 12px 0 0;
+	color: #666666;
+	font-size: 15px;
+	text-align: center;
+}
+
+.foco-buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 28px;
+}
+
+.foco-buttons button,
+.foco-button {
+	min-width: 180px;
+	padding: 12px 18px;
+	border: 0;
+	border-radius: 4px;
+	background-color: #1D2D2A;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.2s, transform 0.2s;
+}
+
+.foco-buttons button:hover,
+.foco-button:hover {
+	background-color: #2b9375;
+	transform: translateY(-2px);
+}
+
+.tutorial-video {
+	width: min(100%, 720px);
+	margin: 32px auto 0;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+.tutorial-video iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
 @media (max-width: 768px) {
 	.home-container {
 		display: block;
@@ -27,6 +92,20 @@
 
 	.main-content {
 		min-height: calc(100vh - 180px);
-		padding: 24px 16px;
+		padding: 28px 16px;
+	}
+
+	.treinos-intro {
+		padding: 22px 16px;
+	}
+
+	.foco-buttons {
+		gap: 8px;
+	}
+
+	.foco-buttons button,
+	.foco-button {
+		width: 100%;
+		min-width: 0;
 	}
 }
