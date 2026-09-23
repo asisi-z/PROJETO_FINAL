@@ -27,13 +27,15 @@
                 <form (ngSubmit)="login()" #loginForm="ngForm">
                     <div class="input-group">
                         <span class="icon">👤</span>
-                        <input type="text" name="nome" id="username" placeholder="Insira seu e-mail ou usuário" autocomplete="username" required [(ngModel)]="username">
+                        <input type="text" name="nome" id="username" placeholder="Insira seu e-mail" autocomplete="username" required [(ngModel)]="username">
                     </div>
                     
                     <div class="input-group">
                         <span class="icon">🔒</span>
                         <input type="password" name="senha" id="password" placeholder="Insira sua senha" autocomplete="current-password" required [(ngModel)]="password">
                     </div>
+
+                    <a class="signup-link" routerLink="/cadastro">Faça seu cadastro</a>
 
                     <div class="remember-me">
                         <label>Logar automaticamente</label>
@@ -42,6 +44,10 @@
                     
                     <button type="submit" class="btn-submit" [disabled]="loginForm.invalid">Entrar</button>
                 </form>
+
+                <a class="tutorial-button" href="https://youtu.be/9ZNgpnUdq2o?si=AK3r2EEFUmTgVSgb" target="_blank" rel="noopener noreferrer">
+                    Tutorial para navegar no site
+                </a>
 
                 <div class="message" [class.error]="isError" [class.success]="!isError && feedbackMessage">{{ feedbackMessage }}</div>
             </div>

@@ -1,21 +1,47 @@
-<main class="cadastro-page">
-  <section class="cadastro-box">
-    <h1>Criar cadastro</h1>
-    <p>Preencha seus dados para continuar.</p>
+<div class="card-cadastro">
+  <h2>Criar Conta</h2>
 
-    <form (ngSubmit)="cadastrar()" #cadastroForm="ngForm">
-      <label for="nome">Nome</label>
-      <input id="nome" name="nome" type="text" required [(ngModel)]="nome">
+  <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
+    <div class="campo">
+      <label for="nome">Nome Completo</label>
+      <input id="nome" type="text" formControlName="nome" placeholder="Digite seu nome">
+      <span class="erro" *ngIf="formCadastro.get('nome')?.invalid && formCadastro.get('nome')?.touched">
+        Nome é obrigatório (mínimo 3 letras).
+      </span>
+    </div>
 
+    <div class="campo">
       <label for="email">E-mail</label>
-      <input id="email" name="email" type="email" required [(ngModel)]="email">
+      <input id="email" type="email" formControlName="email" placeholder="seu@email.com">
+      <span class="erro" *ngIf="formCadastro.get('email')?.invalid && formCadastro.get('email')?.touched">
+        Insira um e-mail válido.
+      </span>
+    </div>
 
+    <div class="campo">
       <label for="senha">Senha</label>
-      <input id="senha" name="senha" type="password" required [(ngModel)]="senha">
+      <input id="senha" type="password" formControlName="senha" placeholder="Sua senha">
+      <span class="erro" *ngIf="formCadastro.get('senha')?.invalid && formCadastro.get('senha')?.touched">
+        A senha deve ter no mínimo 6 caracteres.
+      </span>
+    </div>
 
-      <button type="submit" [disabled]="cadastroForm.invalid">Cadastrar</button>
-    </form>
+    <div class="campo">
+      <label for="idade">Idade</label>
+      <input id="idade" type="number" formControlName="idade" placeholder="Digite sua idade" min="1" step="1" inputmode="numeric">
+      <span class="erro" *ngIf="formCadastro.get('idade')?.invalid && formCadastro.get('idade')?.touched">
+        Informe uma idade usando somente números.
+      </span>
+    </div>
 
-    <p class="feedback">{{ feedbackMessage }}</p>
-  </section>
-</main>
+    <label class="lgpd">
+      <input type="checkbox" formControlName="lgpd">
+      <span>Li e aceito os <a class="terms-link" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm" target="_blank" rel="noopener noreferrer">Termos de Uso</a> e a <a class="terms-link" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> do Mundo Fitness.</span>
+    </label>
+
+    <button type="submit" [disabled]="formCadastro.invalid">Cadastrar</button>
+
+    <p class="sucesso" *ngIf="mensagem">{{ mensagem }}</p>
+    <button class="login-button" type="button" routerLink="/login" *ngIf="mensagem">Ir para o login</button>
+  </form>
+</div>
