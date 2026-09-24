@@ -14,7 +14,7 @@ export const routes: Routes = [
 	{ path: 'cadastro', component: CadastroComponent },
 	{ path: 'entrada', component: Entrada, canActivate: [authGuard] },
 	{ path: 'contato', component: Contato, canActivate: [authGuard] },
-	{ path: 'localizacao', component: Localizacao, canActivate: [authGuard] },
+	{ path: 'localizacao', component: Localizacao },
 	{ path: 'treinos', component: Treinos, canActivate: [authGuard] },
 	{ path: 'planos', component: Planos, canActivate: [authGuard] },
 	{ path: '**', redirectTo: 'entrada' },

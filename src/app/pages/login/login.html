@@ -49,6 +49,10 @@
                     Tutorial para navegar no site
                 </a>
 
+                <a class="location-button" routerLink="/localizacao">
+                    Ver localização da academia
+                </a>
+
                 <div class="message" [class.error]="isError" [class.success]="!isError && feedbackMessage">{{ feedbackMessage }}</div>
             </div>
         </div>

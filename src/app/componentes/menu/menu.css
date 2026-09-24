@@ -15,13 +15,8 @@
 	display: block;
 }
 
-.hamburger,
-.overlay {
-	display: none;
-}
-
 .hamburger {
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -35,14 +30,9 @@
 }
 
 .menu {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	gap: 10px;
-}
-
-.sidebar.open .menu {
-	display: flex;
-	margin-top: 16px;
 }
 
 .menu a {
